@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/nasreddine19/portfolio-2026#readme",
+  "bugs": {
+    "url": "https://github.com/nasreddine19/portfolio-2026/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nasreddine19/portfolio-2026.git"
+  },
+  "license": "ISC",
+  "author": "BOUDELLAL NASREDDINE",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "mongoose": "^9.11.3",
+    "nodemon": "^3.1.14"
+  }
+}

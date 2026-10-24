@@ -1,0 +1,3 @@
+export default async function getProjects(req,res) {
+    // Adding logic later...
+}
