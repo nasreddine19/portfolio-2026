@@ -32,3 +32,16 @@ export async function createProject(req, res) {
         res.status(500).json({ message: error.message });
     }
 }
+
+export async function updateProject(req, res) {
+    try {
+        const { title, description, technologies, githubLink, liveLink } = req.body;
+        const updatedProject = await Project.findByIdAndUpdate(req.params.id, { title, description, technologies, githubLink, liveLink }, { returnDocument: "after" });
+        if (!updatedProject) {
+            return res.status(404).json({ message: "Project not found" });
+        }
+        res.status(200).json(updatedProject);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
